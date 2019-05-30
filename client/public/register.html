@@ -9,14 +9,93 @@
 </head>
 <body>
   <div id="container-fluid">
+    <!-- Navbar -->
+    <nav class="col-md-9 navbar navbar-expand-lg fixed-top navbar-dark navbar-trans">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active font-weight-bold" href="#">Home<span class="sr-only">(current)</span></a>
+                <a data-smooth="#features" class="nav-item nav-link font-weight-bold" href="#features">Features</a>
+                <a class="nav-item nav-link font-weight-bold" href="#">Sign Up</a>
+            </div>
+            </div>
+            <!-- <img src="./client/public/images/boat-from-front-view.png" class="rounded mx-auto d-block w-10 h-10 rounded-circle" alt=""> -->
+        </nav>
     <div class="row">
       <div class="col-md-3 vh-100" style="background-color: grey">
-        <img class="d-flex align-self-center mr-3v" src="./client/images/boat-from-front-view.png" alt=""> 
+        <!-- <img class="d-flex align-self-center mr-3v" src="./client/images/boat-from-front-view.png" alt="">  -->
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" class="align-items-center" alt=""/>
         <h3 class="text-center display-4 font-weight-bold lead text-white">Welcome to SOS Text</h3>
         <p class="text-center font-weight-bold lead text-white">Your One-touch Escape Plan for Any Bad Date</p>
+        <input type="submit" name="" value="Login"/><br/>
+
       </div>
-      <div class="col-md-9 vh-100" style="background-color: lightblue">
-      
+      <div class="col-md-9 vh-100" style="background-color: grey">
+          <div class="row">
+              <!-- <div class="col-md-3 register-left">
+                  <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                  <h3>Welcome</h3>
+                  <p>You are 30 seconds away from earning your own money!</p>
+                  <input type="submit" name="" value="Login"/><br/>
+              </div> -->
+              <div class="col-md-9 register-right">
+                  <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+                          <h3 class="register-heading">Sign Up for SOS Text</h3>
+                          <div class="row register-form">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="password" class="form-control" placeholder="Password *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="maxl">
+                                          <label class="radio inline"> 
+                                              <input type="radio" name="gender" value="male" checked>
+                                              <span> Male </span> 
+                                          </label>
+                                          <label class="radio inline"> 
+                                              <input type="radio" name="gender" value="female">
+                                              <span>Female </span> 
+                                          </label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" minlength="10" maxlength="10" name="txtPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                  </div>
+                                  <div class="form-group">
+                                      <select class="form-control">
+                                          <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                          <option>What is your Birthdate?</option>
+                                          <option>What is Your old Phone Number</option>
+                                          <option>What is your Pet Name?</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                  </div>
+                                  <input type="submit" class="btnRegister"  value="Register"/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
     <!-- Footer -->
