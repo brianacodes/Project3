@@ -5,6 +5,7 @@ const path = require("path");
 const twilioClient = require('./twilioClient');
 const PORT = process.env.PORT || 3001;
 const app = express();
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1/reactsostext";
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://127.0.0.1/reactsostext", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Route: API --> 
 app.post('/api/sendMessage', function(req, res) {
