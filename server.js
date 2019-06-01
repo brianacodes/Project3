@@ -18,6 +18,12 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 mongoose.connect("mongodb://127.0.0.1/reactsostext", { useNewUrlParser: true });
 
+// Route: API --> 
+app.post('/api/sendMessage', function(req, res) {
+  twilioClient.sendSms('+17204955546', req.body.message);
+  res.send('Message Sent')
+});
+
 // Add routes, both API and view
 app.use(routes);
 
@@ -26,11 +32,7 @@ app.use(routes);
 // // POST Route (/message): Portal: Send Msg >> API >> Twilio >> Phone
 // // GET Route (/message): Portal: Temp. Msgs >> API >> Portal
 
-// Route: API --> 
-app.get('/sendMessage', function(req, res) {
-  twilioClient.sendSms('+17204955546', 'Test Message');
-  res.send('Message Sent')
-});
+
 
 // Send every request to the React app
 // Define any API routes before this runs
